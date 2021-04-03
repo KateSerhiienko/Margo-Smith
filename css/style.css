@@ -59,7 +59,9 @@ button::-moz-focus-inner {
 a,
 a:visited,
 a:hover {
+  cursor: pointer;
   text-decoration: none;
+  color: inherit;
 }
 
 ul,
@@ -104,6 +106,7 @@ h6 {
   font-size: 18px;
   font-family: "Roboto", sans-serif;
   color: #070707;
+  scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -128,6 +131,11 @@ h6 {
 
 .navigation ul li {
   width: 90px;
+  color: #828282;
+}
+
+.navigation ul li:first-child {
+  color: #070707;
 }
 
 .navigation ul li:last-child {
@@ -136,7 +144,6 @@ h6 {
 
 .navigation ul li a {
   line-height: 30px;
-  color: #828282;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -321,6 +328,16 @@ h6 {
 
 .portfolio__item {
   margin-bottom: 87px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 
 .portfolio__item:last-child {
@@ -331,13 +348,12 @@ h6 {
   margin-bottom: 45px;
 }
 
-.portfolio__item p {
-  text-align: center;
+.portfolio__item a {
   text-decoration: underline;
 }
 
-.portfolio__item p span {
-  font-weight: 700;
+.portfolio__item a:hover {
+  color: #828282;
 }
 
 .contacts {

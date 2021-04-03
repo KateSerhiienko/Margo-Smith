@@ -62,7 +62,9 @@ button::-moz-focus-inner {
 a,
 a:visited,
 a:hover {
+  cursor: pointer;
   text-decoration: none;
+  color: inherit;
 }
 
 ul,
@@ -130,6 +132,7 @@ $color-grey-lighter-filter: invert(99%) sepia(1%) saturate(2571%)
   font-size: 18px;
   font-family: "Roboto", sans-serif;
   color: $color-black;
+  scroll-behavior: smooth;
 }
 
 .wrapper {
@@ -148,6 +151,11 @@ $color-grey-lighter-filter: invert(99%) sepia(1%) saturate(2571%)
 
     li {
       width: 90px;
+      color: $color-grey;
+
+      &:first-child {
+        color: $color-black;
+      }
 
       &:last-child {
         width: 75px;
@@ -155,7 +163,6 @@ $color-grey-lighter-filter: invert(99%) sepia(1%) saturate(2571%)
 
       a {
         line-height: 30px;
-        color: $color-grey;
         transition: 0.3s;
 
         &:hover {
@@ -290,6 +297,9 @@ $color-grey-lighter-filter: invert(99%) sepia(1%) saturate(2571%)
 
   &__item {
     margin-bottom: 87px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 
     &:last-child {
       margin-bottom: 0;
@@ -299,11 +309,11 @@ $color-grey-lighter-filter: invert(99%) sepia(1%) saturate(2571%)
       margin-bottom: 45px;
     }
 
-    p {
-      text-align: center;
+    a {
       text-decoration: underline;
-      span {
-        font-weight: 700;
+
+      &:hover {
+        color: $color-grey;
       }
     }
   }
